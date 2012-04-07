@@ -28,7 +28,13 @@ def nthPrime( n )
 end
 
 def isPrime( n )
-    return getDivisors( n ).length == 2
+    limit = ( Math.sqrt( n ) + 0.5 ).to_i
+    for i in 2..limit
+        if n % i == 0
+            return false
+        end
+    end
+    return true
 end
 
 # unsorted
@@ -73,4 +79,8 @@ end
 
 def isPalindrome( n )
     return n.to_s.reverse == n.to_s
+end
+
+def isPythagTrip( a, b, c )
+    return a**2 + b**2 == c**2
 end
