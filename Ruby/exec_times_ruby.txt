@@ -1,0 +1,71 @@
+====================== Execution times for Ruby scripts ======================
+
+Problem 1:
+    real    0m0.022s
+    user    0m0.016s
+    sys     0m0.004s
+
+Problem 2:
+    real    0m0.018s
+    user    0m0.016s
+    sys     0m0.004s
+
+Problem 3:
+    real    0m1.050s
+    user    0m0.200s
+    sys     0m0.000s
+
+Problem 4:
+    real    0m6.266s
+    user    0m6.236s
+    sys     0m0.012s
+
+Problem 5:
+    real    0m4.017s
+    user    0m3.604s
+    sys     0m0.004s
+
+Problem 6:
+    real    0m0.278s
+    user    0m0.004s
+    sys     0m0.004s
+
+Problem 7:
+    real    0m5.013s
+    user    0m4.996s
+    sys     0m0.004s
+
+Problem 8:
+    real    0m0.186s
+    user    0m0.064s
+    sys     0m0.000s
+
+Problem 9:
+    real    0m1.487s
+    user    0m0.568s
+    sys     0m0.000s
+
+Problem 10:
+    real    4m38.657s
+    user    4m37.733s
+    sys     0m0.256s
+
+Problem 11:
+    real    0m0.036s
+    user    0m0.028s
+    sys     0m0.008s
+
+Problem 12:
+    real    0m5.586s
+    user    0m5.552s
+    sys     0m0.020s
+
+Problem 13:
+    real    0m0.021s
+    user    0m0.012s
+    sys     0m0.004s
+
+Problem 14:
+    real    1m25.889s
+    user    1m25.553s
+    sys     0m0.112s
