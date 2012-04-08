@@ -1,0 +1,42 @@
+===================== Execution Times for Python Scripts =====================
+
+Problem 23:
+    real    0m4.966s
+    user    0m4.904s
+    sys     0m0.056s
+
+Problem 24:
+    real    0m0.407s
+    user    0m0.388s
+    sys     0m0.012s
+
+Problem 25:
+    real    0m0.412s
+    user    0m0.380s
+    sys     0m0.032s
+
+Problem 26:
+    real    0m18.127s
+    user    0m18.069s
+    sys     0m0.024s
+
+Problem 27:
+    real    0m21.055s
+    user    0m21.069s
+    sys     0m0.024s
+
+Problem 28:
+    real    0m3.635s
+    user    0m3.568s
+    sys     0m0.052s
+
+Problem 29:
+    real    0m0.265s
+    user    0m0.248s
+    sys     0m0.012s
+
+Problem 30:
+    real    0m9.540s
+    user    0m9.489s
+    sys     0m0.036s
+
