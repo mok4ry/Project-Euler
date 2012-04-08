@@ -14,7 +14,6 @@ in the same way?
 """
 import sys
 import time
-import loadingbar
 from numberwork import spiral
 
 def main():
@@ -26,9 +25,7 @@ def main():
     start = 0
     end = LEN_SPIRAL - 1
     print( "Summing spiral diagonals ... " )
-    bar = loadingbar.LoadingBar( 0, LEN_SPIRAL )
     while not start == LEN_SPIRAL:
-        bar.update( start )
         s += sp[ y ][ start ] + sp[ y ][ end ]
         y += 1
         start += 1

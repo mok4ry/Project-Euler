@@ -21,14 +21,11 @@ in its decimal fraction part.
 import sys
 import time
 import numberwork
-import loadingbar
 
 def main():
     longestPeriod = 1
     number = 0
-    loading_bar = loadingbar.LoadingBar( 950, 1000 )
     for i in range(950, 1000):
-        loading_bar.update( i )
         thisLength = numberwork.lengthOfRDR( i )
         if thisLength > longestPeriod:
             longestPeriod = thisLength
@@ -43,6 +40,4 @@ if __name__ == "__main__":
         print( numberwork.lengthOfRDR( int( sys.argv[1] ) ) )
         print( "Execution time: " + str( time.time() - t0 ) )
     else:
-        t0 = time.time()
         main()
-        print( "Execution time: " + str( time.time() - t0 ) + "s" )

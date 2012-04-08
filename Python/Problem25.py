@@ -17,14 +17,11 @@ import numberwork
 def main():
     starting_n = 4775
     for i in range( 15 ):
-        t0 = time.time()
         numDigits = numberwork.nthFibonacci( starting_n + i, numOfDigits=True )
-        elapsedTime = time.time() - t0
         print( str(starting_n + i) +  "th number has ", numDigits, "digits." )
         if numDigits == 1000:
             print( "The first Fibonacci number to have 1000 digits is the " + \
                 str( starting_n + i ) + "th term" )
-            print( "Calculated in " + str( elapsedTime ) + "s" )
             break
 
 if len( sys.argv ) > 1:

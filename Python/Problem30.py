@@ -12,7 +12,6 @@ The sum of these numbers is 1634 + 8208 + 9474 = 19316
 Find the sum of all the numbers that can be written as the sum of the fifth
 powers of their digits.
 """
-from time import time
 from numberwork import sumOfxPowOfDigits
 
 def main():
@@ -27,7 +26,5 @@ def main():
     print( "Sum of such numbers:", sum( validNums ) )
 
 if __name__ == "__main__":
-    t0 = time()
     main()
-    print( "Execution time:", time() - t0 )
 

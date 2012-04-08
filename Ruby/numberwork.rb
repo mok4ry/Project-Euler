@@ -27,6 +27,19 @@ def nthPrime( n )
     return num - 2
 end
 
+def nthTriangleNumber( n )
+    return ( n * (n + 1) ) / 2
+end
+
+def termsInCollatz( n )
+    i = 1
+    while n != 1
+        n % 2 == 0 ? n = n / 2 : n = 3 * n + 1
+        i += 1
+    end
+    return i
+end
+
 def isPrime( n )
     limit = ( Math.sqrt( n ) + 0.5 ).to_i
     for i in 2..limit

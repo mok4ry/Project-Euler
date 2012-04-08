@@ -18,11 +18,8 @@ starting with n = 0.
 """
 import time
 from numberwork import isPrime
-import loadingbar
 
 def main():
-    bar = loadingbar.LoadingBar( 0, 2000 )
-
     valuesOfB = []
     for x in range( 2, 1000 ):
         if isPrime( x ):
@@ -33,7 +30,6 @@ def main():
     bestA = 0
     bestB = 0
     for a in range( -999, 1000, 2 ):
-        bar.update( a + 1000 )
         for b in valuesOfB:
             n = 0
             while not (n**2 + a*n + b) == 0 and \
@@ -51,6 +47,4 @@ def main():
         str( bestA * bestB ) )
 
 if __name__ == "__main__":
-    t0 = time.time()
     main()
-    print( "Execution time: " + str( time.time() - t0 ) + "s" )

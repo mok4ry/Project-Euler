@@ -24,6 +24,6 @@ def main():
             abn.add(n)
     print(s)
 
-t0 = time.time()
-main()
-print( "Execution time:", time.time() - t0 )
+if __name__ == "__main__":
+    main()
+
