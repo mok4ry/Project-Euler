@@ -69,3 +69,20 @@ Problem 14:
     real    1m25.889s
     user    1m25.553s
     sys     0m0.112s
+
+Problem 15:
+    real    0m0.015s
+    user    0m0.012s
+    sys     0m0.000s
+
+Problem 16:
+    real    0m0.020s
+    user    0m0.008s
+    sys     0m0.008s
+
+Problem 17:
+    real    0m0.039s
+    user    0m0.036s
+    sys     0m0.000s
+
+
