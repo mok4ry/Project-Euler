@@ -100,6 +100,11 @@ Problem 20:
     user    0m0.016s
     sys     0m0.004s
 
+Problem 21:
+    real    0m2.772s
+    user    0m2.740s
+    sys     0m0.008s
+
 
 
  
