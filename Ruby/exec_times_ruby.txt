@@ -85,4 +85,15 @@ Problem 17:
     user    0m0.036s
     sys     0m0.000s
 
+Problem 18:
+    real    0m0.024s
+    user    0m0.012s
+    sys     0m0.008s
 
+Problem 19:
+    real    0m0.024s
+    user    0m0.020s
+    sys     0m0.000s
+
+
+ 
