@@ -51,10 +51,10 @@ def isPrime( n )
 end
 
 # unsorted
-def getDivisors( n )
-    divisors = []
+def getDivisors( n, proper=false )
+    proper ? divisors = [ 1 ] : divisors = [ 1, n ]
     limit = Integer( Math.sqrt( n ) + 0.5 )
-    for i in 1...limit
+    for i in 2...limit
         if n % i == 0
             divisors.push( i )
             divisors.push( n / i )
@@ -62,6 +62,21 @@ def getDivisors( n )
     end
     if n % limit == 0
         divisors.push( limit )
+    end
+    return divisors
+end
+
+def getDivisorPairs( n, proper=false )
+    proper ? lowLim = 2 : lowLim = 1
+    divisors = []
+    limit = Integer( Math.sqrt( n ) + 0.5 )
+    for i in lowLim...limit
+        if n % i == 0
+            divisors.push( [ i, n / i ] )
+        end
+    end
+    if n % limit == 0
+        divisors.push( [ limit, limit ] )
     end
     return divisors
 end
@@ -91,9 +106,24 @@ def largestPrimeFactor( n )
 end
 
 def isPalindrome( n )
-    return n.to_s.reverse == n.to_s
+    n = n.to_s
+    return n.reverse == n
 end
 
 def isPythagTrip( a, b, c )
     return a**2 + b**2 == c**2
+end
+
+def factorial( n, low = 1 )
+    return n.downto(low).inject(:*)
+end
+
+def isPandigital_1to9( n )
+    n = n.to_s
+    "123456789".each_char do |x|
+        if !( n.include?( x ) )
+            return false
+        end
+    end
+    return n.length == 9
 end

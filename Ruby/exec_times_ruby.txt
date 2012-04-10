@@ -110,3 +110,9 @@ Problem 21:
     user    0m0.244s
     sys     0m0.008s
 
+Problem 32:
+    real    0m2.069s
+    user    0m2.060s
+    sys     0m0.004s
+
+   
