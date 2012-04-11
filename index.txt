@@ -8,4 +8,4 @@ Problems solved in Python:
     36
 
 Problems solved in Java:
-    31, 33
+    31, 34
