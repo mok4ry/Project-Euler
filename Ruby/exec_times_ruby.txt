@@ -115,4 +115,10 @@ Problem 32:
     user    0m2.060s
     sys     0m0.004s
 
+Problem 32:
+    real    0m0.217s
+    user    0m0.196s
+    sys     0m0.016s
+
+
    
