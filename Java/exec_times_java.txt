@@ -5,7 +5,7 @@ Problem 31:
     user    0m0.268s
     sys     0m0.028s
 
-Problem 33:
+Problem 34:
     real    0m0.366s
     user    0m0.352s
     sys     0m0.044s
