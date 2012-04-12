@@ -135,5 +135,14 @@ Problem 38:
     user    0m0.108s
     sys     0m0.012s
 
+Problem 40:
+    real    2m55.152s
+    user    1m32.922s
+    sys     1m18.461s
 
-   
+Problem 40:
+    real    0m0.065s
+    user    0m0.052s
+    sys     0m0.008s
+
+
