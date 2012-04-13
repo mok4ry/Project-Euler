@@ -9,4 +9,4 @@ Problems solved in Python:
     36, 39
 
 Problems solved in Java:
-    31, 34
+    31, 34, 42
