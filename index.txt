@@ -6,7 +6,7 @@ Problems solved in Ruby:
 
 Problems solved in Python:
     23, 24, 25, 26, 27, 28, 29, 30,
-    36, 39
+    36, 39, 44
 
 Problems solved in Java:
     31, 34, 42
