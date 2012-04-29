@@ -1,6 +1,16 @@
 
 require 'set'
 
+def frac_Reduce( n, d )
+    nDivs = getDivisors( n )
+    getDivisors( d ).sort.reverse.each do |div|
+        if nDivs.include?( div ) && div != 1
+            return [ n/div, d/div ]
+        end
+    end
+    return [ n, d ]
+end
+
 def firstNprimes( n )
     count = 1
     primes = [ 2 ]
@@ -11,6 +21,16 @@ def firstNprimes( n )
             count += 1
         end
         num += 2
+    end
+    return primes
+end
+
+def primesBetween( a, b )
+    primes = Array.new
+    for x in 1..b
+        if isPrime( x )
+            primes.push( x )
+        end
     end
     return primes
 end
@@ -27,6 +47,22 @@ def nthPrime( n )
     return num - 2
 end
 
+def leftTruncPrimes( n )
+    while isPrime( n )
+        n = n.to_s
+        n = n[1...n.length].to_i
+    end
+    return n == 0
+end
+
+def rightTruncPrimes( n )
+    while isPrime( n )
+        n = n.to_s
+        n = n[0...n.length - 1].to_i
+    end
+    return n == 0    
+end
+
 def nthTriangleNumber( n )
     return ( n * (n + 1) ) / 2
 end
@@ -40,6 +76,26 @@ def termsInCollatz( n )
     return i
 end
 
+def isCircularPrime( n )
+    circs = circulations( n )
+    circs.each do |c|
+        if !isPrime( c )
+            return false
+        end
+    end
+    return true
+end
+
+def circulations( n )
+    c = Array.new
+    n = n.to_s
+    n.length.times do
+        n = n[1...n.length] + n[0..0]
+        c.push( n.to_i )
+    end
+    return c
+end
+
 def isPrime( n )
     limit = ( Math.sqrt( n ) + 0.5 ).to_i
     for i in 2..limit
@@ -47,11 +103,10 @@ def isPrime( n )
             return false
         end
     end
-    return true
+    return n > 1
 end
 
-# unsorted
-def getDivisors( n, proper=false )
+def getDivisors( n, proper=false, sort=false )
     proper ? divisors = [ 1 ] : divisors = [ 1, n ]
     limit = Integer( Math.sqrt( n ) + 0.5 )
     for i in 2...limit
@@ -63,6 +118,7 @@ def getDivisors( n, proper=false )
     if n % limit == 0
         divisors.push( limit )
     end
+    return divisors.sort if sort
     return divisors
 end
 
@@ -81,15 +137,15 @@ def getDivisorPairs( n, proper=false )
     return divisors
 end
 
-# sorted
 def getPrimeFactorization( n )
     pFact = SortedSet.new
-    primes = firstNprimes( 1000 )
+    primes = firstNprimes( Math.sqrt( n ) )
     primes.each do |prime|
         while n % prime == 0
             pFact.add( prime )
             n /= prime
         end
+        n == 1 ? break : nil
     end
     return pFact
 end
