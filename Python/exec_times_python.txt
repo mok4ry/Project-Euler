@@ -55,4 +55,8 @@ Problem 44:
     user    0m3.480s
     sys     0m0.048s
 
+Problem 44:
+    real    0m0.454s
+    user    0m0.432s
+    sys     0m0.016s
 
