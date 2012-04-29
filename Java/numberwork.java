@@ -1,6 +1,12 @@
 import java.util.ArrayList;
 
 class numberwork {
+
+    /**
+     * Used for covering floating-point discrepancies.
+     */
+    public static final double DELTA = 0.0000001;
+
     /**
      * Returns the factorial of a number. Uses only primitive int precision.
      *
@@ -30,4 +36,82 @@ class numberwork {
         return digits;
     }
 
+    /**
+     * Returns an ArrayList of the first n triangle numbers.
+     *
+     * @param n Number of triangle numbers to return.
+     * @return First n triangle numbers.
+     */
+    public static ArrayList<Integer> firstNtriNums( int n ) {
+        ArrayList<Integer> triNums = new ArrayList<Integer>();
+        int lastNum = 0;
+        for ( int i = 1; i <= n; i++ ) {
+            lastNum += i;
+            triNums.add( lastNum );
+        }
+        return triNums;
+    }
+
+    /**
+     * Returns true if the given number is a triangle number.
+     *
+     * @param n The number to check for being triangular.
+     * @return true if the given number is a triangle number.
+     */
+    public static boolean isTriangleNumber( double n ) {
+        double root = ( Math.sqrt( 1 + 8*n ) - 1 ) / 2; 
+        return Math.abs( root - (int)root ) < DELTA;
+    }
+
+    /**
+     * Returns true if the given number is a pentagonal number.
+     *
+     * @param n The number to check for being pentagonal.
+     * @return true if the number is a pentagonal number.
+     */
+    public static boolean isPentagonalNumber( double n ) {
+        double root = ( Math.sqrt( 1 + 24*n ) + 1 ) / 6; 
+        return Math.abs( root - (int)root ) < DELTA;
+    }
+
+    /**
+     * Returns true if the given number is a hexagonal number.
+     *
+     * @param n The number to check for being hexagonal.
+     * @return true if the number is a hexagonal number.
+     */
+    public static boolean isHexagonalNumber( double n ) {
+        double root = ( Math.sqrt( 1 + 8*n ) + 1 ) / 4; 
+        return Math.abs( root - (int)root ) < DELTA;
+    }
+
+    /**
+     * Returns the nth triangle number.
+     *
+     * @param n Indicates the nth triangle number.
+     * @return The nth triangle number.
+     */
+    public static int nthTriangleNumber( int n ) {
+        return ( n * ( n + 1 ) )/2;
+    }
+
+    /**
+     * Returns the nth pentagonal number.
+     *
+     * @param n Indicates the nth pentagonal number.
+     * @return The nth pentagonal number.
+     */
+    public static int nthPentagonalNumber( int n ) {
+        return ( n * ( 3*n - 1 ) )/2;
+    }
+
+    /**
+     * Returns the nth hexagonal number.
+     *
+     * @param n Indicates the nth hexagonal number.
+     * @return The nth hexagonal number.
+     */
+    public static int nthHexagonalNumber( int n ) {
+        return n * ( 2*n - 1 );
+    }
 }
