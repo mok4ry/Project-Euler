@@ -114,4 +114,20 @@ class numberwork {
     public static int nthHexagonalNumber( int n ) {
         return n * ( 2*n - 1 );
     }
+
+    public static boolean isPrime( int n ) {
+        double lim = Math.sqrt( n );
+        for ( int i = 2; i < lim; i++ ) {
+            if ( n % i == 0 ) { return false; }
+        }
+        return true;
+    }
+
+    public static boolean isPrime( double n ) {
+        double lim = Math.sqrt( n );
+        for ( int i = 2; i < lim; i++ ) {
+            if ( n % i == 0 ) { return false; }
+        }
+        return true;
+    }
 }

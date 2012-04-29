@@ -20,3 +20,8 @@ Problem 42:
     user    0m0.144s
     sys     0m0.044s
 
+Problem 42:
+    real    0m0.173s
+    user    0m0.144s
+    sys     0m0.036s
+
