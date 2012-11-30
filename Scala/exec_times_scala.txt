@@ -1,0 +1,6 @@
+Problem 49:
+    real    0m1.724s
+    user    0m2.311s
+    sys     0m0.094s
+
+

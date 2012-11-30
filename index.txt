@@ -11,4 +11,7 @@ Problems solved in Python:
 Problems solved in Java:
     31, 34, 42, 45, 46
 
-TOTAL: 48
+Problems solved in Scala:
+    49
+
+TOTAL: 49
