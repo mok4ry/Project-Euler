@@ -5,4 +5,8 @@ Problem 49:
     user    0m2.311s
     sys     0m0.094s
 
+Problem 51:
+    real    0m5.386s
+    user    0m6.192s
+    sys     0m0.225s
 
