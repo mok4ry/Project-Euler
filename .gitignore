@@ -1,0 +1,8 @@
+# Compiled stuff
+
+*.o
+*.class
+
+# Log files
+
+*.log

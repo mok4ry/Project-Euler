@@ -60,3 +60,13 @@ Problem 44:
     user    0m0.432s
     sys     0m0.016s
 
+Problem 48:
+    real    0m0.065s
+    user    0m0.052s
+    sys     0m0.011s
+
+Problem 50:
+    real    0m0.953s
+    user    0m0.937s
+    sys     0m0.013s
+

@@ -124,6 +124,13 @@ def lengthOfRDR( n ):
                     foundLength = substrlen
     return foundLength
 
+def getPrimesInRange( lowerLimit, upperLimit ):
+    primes = []
+    for n in range( lowerLimit, upperLimit + 1 ):
+        if isPrime(n):
+            primes.append( n )
+    return primes
+
 def isPrime( n ):
     """ isPrime: int -> boolean
     Returns True is passed-in number is a prime number,
