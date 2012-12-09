@@ -1,4 +1,4 @@
-================== Execution Times for Java Programs ==================
+================== Execution Times for Scala Programs ==================
 
 Problem 49:
     real    0m1.724s
@@ -14,4 +14,14 @@ Problem 52:
     real    0m0.986s
     user    0m1.690s
     sys     0m0.093s
+
+Problem 53:
+    real    0m0.787s
+    user    0m1.176s
+    sys     0m0.080s
+
+Problem 54:
+    real    0m1.240s
+    user    0m1.858s
+    sys     0m0.083s
 
