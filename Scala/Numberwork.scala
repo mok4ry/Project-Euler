@@ -11,6 +11,11 @@ object Numberwork {
     isLychrelNumberRec( n, 0 )
   }
 
+  def digitalSum( n: BigInt ): Int = toIntList( n ).foldLeft(0)( _ + _ )
+
+  def power( a: Int, b: Int ): BigInt =
+    ( for ( x <- (1 to a) ) yield b ).foldRight(BigInt(1))( _ * _ )
+
   def isPalindrome( n: BigInt ): Boolean = n == reverseNum( n )
 
   def reverseNum( n: BigInt ): BigInt =

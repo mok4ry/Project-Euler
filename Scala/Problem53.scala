@@ -1,3 +1,6 @@
+// How many, not necessarily distinct, values of nCr, for 1 <= n <= 100,
+// are greater than one-million?
+
 object Problem53 {
   
   def main( args: Array[String] ) {
