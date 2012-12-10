@@ -12,6 +12,6 @@ Problems solved in Java:
     31, 34, 42, 45, 46
 
 Problems solved in Scala:
-    49, 51, 52, 53, 54
+    49, 51, 52, 53, 54, 55
 
-TOTAL: 54
+TOTAL: 55
