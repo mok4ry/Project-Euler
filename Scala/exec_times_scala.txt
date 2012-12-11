@@ -35,3 +35,8 @@ Problem 56:
     user    0m1.608s
     sys     0m0.092s
 
+Problem 57:
+    real    0m1.851s
+    user    0m2.527s
+    sys     0m0.122s
+
