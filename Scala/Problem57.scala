@@ -23,8 +23,6 @@ import collection.mutable.HashMap
 object Problem57 {
   val one = new Rational( 1, 1 )
   val two = new Rational( 2, 1 )
-  val oneHalf = new Rational( 1, 2 )
-  val twoPlusOneHalf = two + oneHalf
 
   val cache = new HashMap[Int, Rational]
 
