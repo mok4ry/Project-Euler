@@ -6,7 +6,7 @@ Problems solved in Ruby:
 
 Problems solved in Python:
     23, 24, 25, 26, 27, 28, 29, 30,
-    36, 39, 44, 48, 50
+    36, 39, 44, 48, 50, 58
 
 Problems solved in Java:
     31, 34, 42, 45, 46
@@ -14,4 +14,4 @@ Problems solved in Java:
 Problems solved in Scala:
     49, 51, 52, 53, 54, 55, 56, 57
 
-TOTAL: 57
+TOTAL: 58

@@ -208,6 +208,65 @@ def spiral( sidelength ):
     
     return spiral
 
+def addToSpiral( sp, sidelength ):
+    """ addToSpiral: spiral * int -> spiral
+    Adds a layer to the given spiral
+    """
+    newSidelength = sidelength + 2
+    newSpiral = [ [0] for i in range( newSidelength ) ]
+    newSpiral[0] = [0] * newSidelength
+    newSpiral[ newSidelength - 1 ] = [0] * newSidelength
+    for i in range( 1, newSidelength - 1 ):
+        newSpiral[i] += sp[i - 1] + [0]
+    
+    currNum = sidelength ** 2 + 1
+    # Right side
+    for row in range( newSidelength - 2, -1, -1 ):
+        newSpiral[row][newSidelength - 1] = currNum
+        currNum += 1
+    
+    # Top
+    for col in range( newSidelength - 2, -1, -1 ):
+        newSpiral[0][col] = currNum
+        currNum += 1
+
+    # Left side
+    for row in range( 1, newSidelength ):
+        newSpiral[row][0] = currNum
+        currNum += 1
+
+    # Bottom
+    for col in range( 1, newSidelength ):
+        newSpiral[newSidelength - 1][col] = currNum
+        currNum += 1
+
+    return newSpiral
+
+def diagonalsOfSpiral( sidelength ):
+    diagNums = []
+    baseNum = 0
+    for s in range( 1, int( ( sidelength + 1 ) / 2 ) ):
+        baseNum = ( 2 * s - 1 ) ** 2
+        diagNums.append( baseNum + 2 * s )
+        diagNums.append( baseNum + 4 * s )
+        diagNums.append( baseNum + 6 * s )
+        diagNums.append( baseNum + 8 * s )
+    return diagNums
+
+def addToDiagonalsOfSpiral( diagNums, sidelength ):
+    diagNums += getAdditionalDiagsOfSpiral( sidelength )
+    return diagNums
+
+def getAdditionalDiagsOfSpiral( sidelength ):
+    newDiags = []
+    distanceFromMiddle = int( ( sidelength + 1 ) / 2 )
+    baseNum = (2 * distanceFromMiddle - 1) ** 2
+    newDiags.append( baseNum + 2 * distanceFromMiddle )
+    newDiags.append( baseNum + 4 * distanceFromMiddle )
+    newDiags.append( baseNum + 6 * distanceFromMiddle )
+    newDiags.append( baseNum + 8 * distanceFromMiddle )
+    return newDiags
+
 def sumOfxPowOfDigits( n, p ):
     """ sumOfxPowOfDigits: int * int -> int
     Returns the sum of each digit of n raised to the pth power.
