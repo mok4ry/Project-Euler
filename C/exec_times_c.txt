@@ -10,4 +10,9 @@ Problem 2:
     user    0m0.001s
     sys     0m0.002s
 
+Problem 3:
+    real    0m0.005s
+    user    0m0.003s
+    sys     0m0.002s
+
 
