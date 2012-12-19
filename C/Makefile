@@ -1,10 +1,10 @@
-problem_num=$(shell expr `ls -1 *.c | wc -l` - 1 )
+problem_file=$(shell ls -1 *.c | sort | tail -n 1 )
 
 problem: numberwork
-	gcc -o Problem$(problem_num) Problem$(problem_num).c
+	gcc -o problem $(problem_file)
 
 numberwork:
 	gcc -c Numberwork.c
 
 clean:
-	rm *.o Problem$(problem_num)
+	rm *.o problem
