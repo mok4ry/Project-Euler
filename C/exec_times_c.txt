@@ -20,4 +20,9 @@ Problem 4:
     user    0m0.089s
     sys     0m0.005s
 
+Problem 5:
+    real    0m0.267s
+    user    0m0.264s
+    sys     0m0.002s
+
 

@@ -9,6 +9,7 @@ int *to_digits( int n );
 int number_of_digits( int n );
 int round_to_int( double n );
 void print_int_array( int *arr, int len );
+bool div_from_one_to_n( long int num, int n );
 
 bool is_prime( long int n ) {
     int i;
@@ -65,4 +66,14 @@ void print_int_array( int *arr, int len ) {
     for ( i = 0; i < len; i++ ) {
         printf( "%d ", arr[i] );
     }
+}
+
+bool div_from_one_to_n( long int num, int n ) {
+    int i;
+    for ( i = 2; i <= n; i++ ) {
+        if ( num % i != 0 ) {
+            return false;
+        }
+    }
+    return true;
 }
