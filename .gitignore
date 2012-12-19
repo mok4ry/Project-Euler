@@ -3,6 +3,10 @@
 *.o
 *.class
 
+# Executables
+
+problem
+
 # Log files
 
 *.log
