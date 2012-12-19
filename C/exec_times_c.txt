@@ -1,8 +1,13 @@
 =========== Execution times for C programs ===========
 
 Problem 1:
-   real 0m0.003s
-   user 0m0.001s
-   sys  0m0.001s
+    real    0m0.003s
+    user    0m0.001s
+    sys     0m0.001s
+
+Problem 2:
+    real    0m0.003s
+    user    0m0.001s
+    sys     0m0.002s
 
 
