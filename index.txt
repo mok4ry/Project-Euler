@@ -15,4 +15,7 @@ Problems solved in Scala:
     49, 51, 52, 53, 54, 55, 56, 57,
     59
 
-TOTAL: 59
+Problems solved in C:
+    1
+
+TOTAL DISTINCT: 59

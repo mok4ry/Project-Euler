@@ -1,3 +1,4 @@
+package Numberwork
 
 object Numberwork {
 
@@ -10,6 +11,23 @@ object Numberwork {
     }
     isLychrelNumberRec( n, 0 )
   }
+
+  def getPrimesUnder( upperLimit: Int ): List[Int] =
+    getPrimesInRange( 2, upperLimit )
+
+  def getPrimesInRange( lowLimit: Int, upLimit: Int ): List[Int] =
+    for (
+      x <- (lowLimit to upLimit).toList
+      if isPrime(x)
+    ) yield x
+
+  def isPrime( num: BigInt ): Boolean =
+    (2 to math.sqrt(num.doubleValue).toInt) forall ( num % _ != 0 )
+
+  def numConcat( a: BigInt, b: BigInt ): BigInt =
+    BigInt( a.toString + b.toString )
+
+  def sum( nums: List[Int] ): Int = nums.foldRight(0)( _ + _ )
 
   @deprecated( "Use Numberwork.sumOfDigits instead.", "Dec. 11, 2012" )
   def digitalSum( n: BigInt ): Int = toIntList( n ).foldLeft(0)( _ + _ )

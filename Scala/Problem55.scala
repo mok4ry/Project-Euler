@@ -25,7 +25,7 @@
 
 // How many Lychrel numbers are there below ten-thousand?
 
-import Numberwork._
+import Numberwork.Numberwork._
 
 object Problem55 {
 

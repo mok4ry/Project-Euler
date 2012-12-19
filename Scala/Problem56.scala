@@ -5,7 +5,7 @@
 // Considering natural numbers of the form, a^b, where a, b < 100, what is the
 // maximum digital sum?
 
-import Numberwork._
+import Numberwork.Numberwork._
 
 object Problem56 {
 
