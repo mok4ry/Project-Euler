@@ -118,3 +118,13 @@ long int sum_of_primes_under( int n ) {
     }
     return sum;
 }
+
+int char_array_to_int( char *arr, int length ) {
+    int number = 0;
+    int index = 0;
+    while( index < length ) {
+        number += char_to_int( arr[index] ) * pow( 10, length - index - 1);
+        index++;
+    }
+    return number;
+}
