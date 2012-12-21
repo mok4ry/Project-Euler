@@ -25,4 +25,19 @@ Problem 5:
     user    0m0.264s
     sys     0m0.002s
 
+Problem 6:
+    real    0m0.003s
+    user    0m0.001s
+    sys     0m0.001s
+
+Problem 7:
+    real    0m0.044s
+    user    0m0.042s
+    sys     0m0.002s
+
+Problem 8:
+    real    0m0.003s
+    user    0m0.001s
+    sys     0m0.002s
+
 
