@@ -103,3 +103,7 @@ int get_nth_prime( int n ) {
 int char_to_int( char c ) {
     return c - '0';
 }
+
+bool is_pythagorean_triplet( int a, int b, int c ) {
+    return a * a + b * b == c * c;
+}
