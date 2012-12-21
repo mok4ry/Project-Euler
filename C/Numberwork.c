@@ -107,3 +107,14 @@ int char_to_int( char c ) {
 bool is_pythagorean_triplet( int a, int b, int c ) {
     return a * a + b * b == c * c;
 }
+
+long int sum_of_primes_under( int n ) {
+    long int sum = 2;
+    int i;
+    for ( i = 3; i < n; i += 2 ) {
+        if ( is_prime( i ) ) {
+            sum += i;
+        }
+    }
+    return sum;
+}

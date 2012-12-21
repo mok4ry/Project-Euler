@@ -1,4 +1,4 @@
-problem_file=$(shell ls -1 *.c | sort | tail -n 1 )
+problem_file=$(shell ls -1 Problem*.c | sort | tail -n 1 )
 
 problem: numberwork
 	gcc -o problem $(problem_file)
