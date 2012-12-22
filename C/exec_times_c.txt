@@ -65,4 +65,9 @@ Problem 13:
     user    0m0.002s
     sys     0m0.002s
 
+Problem 14:
+    real    0m0.564s
+    user    0m0.560s
+    sys     0m0.002s
+
 
