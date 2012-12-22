@@ -128,3 +128,18 @@ int char_array_to_int( char *arr, int length ) {
     }
     return number;
 }
+
+int get_num_of_divisors( int n ) {
+    int num_divs = ( n == 1 ) ? 1 : 2;   // 1 and n
+    int i;
+
+    for ( i = 2; i < sqrt(n); i++ ) {
+        if ( n % i == 0 ) {
+            num_divs += 2;
+        }
+    }
+    if ( n % (int)sqrt(n) == 0 ) {
+        num_divs++;
+    }
+    return num_divs;
+}
