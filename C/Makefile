@@ -1,6 +1,6 @@
 problem_file=$(shell ls -1 Problem*.c | sort | tail -n 1 )
 
-problem: numberwork
+problem: numberwork bignum
 	gcc -o problem $(problem_file)
 
 debug: numberwork
@@ -9,6 +9,9 @@ debug: numberwork
 
 numberwork:
 	gcc -c Numberwork.c
+
+bignum:
+	gcc -c BigNum.c
 
 clean:
 	rm *.o problem
