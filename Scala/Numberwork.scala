@@ -1,6 +1,7 @@
 package Numberwork
 
 object Numberwork {
+  val delta = 0.0005
 
   def isLychrelNumber( n: Int ): Boolean = {
     def isLychrelNumberRec( n: BigInt, count: Int ): Boolean = {
@@ -28,6 +29,28 @@ object Numberwork {
     BigInt( a.toString + b.toString )
 
   def sum( nums: List[Int] ): Int = nums.foldRight(0)( _ + _ )
+
+  def isInteger( num: Double ): Boolean =
+    num - num.toInt < delta
+
+  def isTriangularNumber( num: Int ): Boolean = {
+    val possibleN = math.sqrt(2 * num).toInt
+    return ((possibleN * (possibleN + 1)) / 2) == num
+  }
+
+  def isSquareNumber( num: Int ): Boolean = isInteger(math.sqrt(num))
+
+  def isPentagonalNumber( num: Int ): Boolean =
+    isSquareNumber(24 * num + 1) && (math.sqrt(24 * num + 1) % 6).toInt == 5
+
+  def isHexagonalNumber( num: Int ): Boolean =
+    isInteger((math.sqrt(8 * num + 1) + 1) / 4)
+
+  def isHeptagonalNumber( num: Int ): Boolean =
+    isInteger((math.sqrt(40 * num + 9) + 3) / 10)
+
+  def isOctagonalNumber( num: Int ): Boolean =
+    isInteger((math.sqrt(3 * num + 1) + 1) / 3)
 
   @deprecated( "Use Numberwork.sumOfDigits instead.", "Dec. 11, 2012" )
   def digitalSum( n: BigInt ): Int = toIntList( n ).foldLeft(0)( _ + _ )
