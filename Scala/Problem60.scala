@@ -10,23 +10,29 @@
 import Numberwork.Numberwork._
 
 object Problem60 {
-  val MAX_PRIME = 1000
+  val MAX_PRIME = 9000
   val primes = getPrimesUnder( MAX_PRIME ).filter( x => x != 2 && x != 5 )
   val numPrimes = primes.length
 
   def main( args: Array[String] ) {
-    for {
-      a <- ( 0 until numPrimes )
-      b <- ( a + 1 until numPrimes )
-      c <- ( b + 1 until numPrimes )
-      d <- ( c + 1 until numPrimes )
-      e <- ( d + 1 until numPrimes )
-    } {
-      val primesList = primes(a) :: primes(b) :: primes(c) :: primes(d) ::
-        primes(e) :: Nil
-      if ( numsSatisfyProblem( primesList ) ) println( primesList )
-      println( primesList )
-    }
+    for (a <- (2 until numPrimes))
+      for (b <- (a + 1 until numPrimes))
+        if (bothConcatsArePrime(primes(a), primes(b)))
+          for (c <- (b + 1 until numPrimes))
+            if (bothConcatsArePrime(primes(a), primes(c)) &&
+                bothConcatsArePrime(primes(b), primes(c)))
+              for (d <- (c + 1 until numPrimes))
+                if (bothConcatsArePrime(primes(a), primes(d)) &&
+                    bothConcatsArePrime(primes(b), primes(d)) &&
+                    bothConcatsArePrime(primes(c), primes(d)))
+                  for (e <- (d + 1 until numPrimes))
+                    if (bothConcatsArePrime(primes(a), primes(e)) &&
+                        bothConcatsArePrime(primes(b), primes(e)) &&
+                        bothConcatsArePrime(primes(c), primes(e)) &&
+                        bothConcatsArePrime(primes(d), primes(e))) {
+                      println(primes(a) + primes(b) + primes(c) + primes(d) + primes(e))
+                      return
+                    }
   }
 
   def numsSatisfyProblem( nums: List[Int] ): Boolean =

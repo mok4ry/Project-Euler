@@ -17,7 +17,7 @@ object Numberwork {
 
   def getPrimesInRange( lowLimit: Int, upLimit: Int ): List[Int] =
     for (
-      x <- (lowLimit to upLimit).toList
+      x <- (lowLimit to upLimit).toList filter (x => x % 2 == 1)
       if isPrime(x)
     ) yield x
 
