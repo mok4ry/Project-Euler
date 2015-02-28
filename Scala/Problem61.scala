@@ -22,7 +22,6 @@
 // and octagonal, is represented by a different number in the set.
 
 import Numberwork.Numberwork._
-import collection.mutable.HashMap
 
 object Problem61 {
   val invalidBeginnings = 42 :: 93 :: 38 :: 97 :: 13 :: 34 :: 27 :: 54 :: 98 ::

@@ -1,5 +1,7 @@
 package Numberwork
 
+import scala.collection.mutable.TreeSet
+
 object Numberwork {
   val delta = 0.0005
 
@@ -75,6 +77,8 @@ object Numberwork {
     }
   }
 
+  def getOrderedDigits( num: BigInt ): String =
+    toIntList(num).sorted.foldLeft("")( _.toString + _.toString)
 
   @deprecated( "Use Numberwork.sumOfDigits instead.", "Dec. 11, 2012" )
   def digitalSum( n: BigInt ): Int = toIntList( n ).foldLeft(0)( _ + _ )

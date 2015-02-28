@@ -53,3 +53,6 @@ Problem 60:
 
 Problem 61:
     17.47s user 0.29s system 105% cpu 16.806 total
+
+Problem 62:
+    2.66s user 0.13s system 160% cpu 1.740 total
