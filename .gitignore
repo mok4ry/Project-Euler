@@ -10,3 +10,6 @@ problem
 # Log files
 
 *.log
+
+# OS X stuff
+.DS_Store
