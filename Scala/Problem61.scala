@@ -22,11 +22,38 @@
 // and octagonal, is represented by a different number in the set.
 
 import Numberwork.Numberwork._
+import collection.mutable.HashMap
 
 object Problem61 {
+  val invalidBeginnings = 42 :: 93 :: 38 :: 97 :: 13 :: 34 :: 27 :: 54 :: 98 ::
+    66 :: 48 :: 63 :: 72 :: 99 :: 19 :: 79 :: 94 :: 68 :: 83 :: 52 :: 57 ::
+    32 :: 18 :: 23 :: 90 :: Nil
 
   def main( args: Array[String] ) {
-    
+    val fourDigitNumbers = (1010 until 10000) filter {x: Int =>
+      (x % 100 > 9) && !(invalidBeginnings contains (x/100).toInt)
+    }
+    val tri = fourDigitNumbers filter (isTriangularNumber(_))
+    val sq = fourDigitNumbers filter (isSquareNumber(_))
+    val pent = fourDigitNumbers filter (isPentagonalNumber(_))
+    val hex = fourDigitNumbers filter (isHexagonalNumber(_))
+    val hep = fourDigitNumbers filter (isHeptagonalNumber(_))
+    val oct = fourDigitNumbers filter (isOctagonalNumber(_))
+
+    for {
+      s   <- sq
+      p   <- pent
+      hx  <- hex
+      hp  <- hep
+      o   <- oct
+    } {
+      if (isCyclicSet(s :: p :: hx :: hp :: o :: Nil, 2, false))
+        for (t <- tri) 
+          if (isCyclicSet(t :: s :: p :: hx :: hp :: o :: Nil, 2)) {
+            println(t + s + p + hx + hp + o)
+            return
+          }
+    }
   }
 
 }

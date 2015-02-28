@@ -52,6 +52,30 @@ object Numberwork {
   def isOctagonalNumber( num: Int ): Boolean =
     isInteger((math.sqrt(3 * num + 1) + 1) / 3)
 
+  def isCyclic( a: Int, b: Int, digits: Int ): Boolean = {
+    val base = math.pow(10, digits)
+    return a % base == (b / base).toInt
+  }
+
+  // digits: digits of each number to use in determining cyclicity
+  // e.g. [123, 345, 561], d = 1  ==> true
+  //      [123, 345, 561], d = 2  ==> false
+  def isCyclicSet( nums: List[Int], digits: Int, wrap: Boolean = true ): Boolean = {
+    def isCyclicSetRec( num: Int, nums: List[Int] ): Option[Int] = {
+      if (nums.length == 1 && isCyclic(num, nums(0), 2)) return Option(nums(0))
+      for (x <- (0 until nums.length)) {
+        if (isCyclic(num, nums(x), digits))
+          return isCyclicSetRec(nums(x), nums.take(x) ++ nums.drop(x + 1))
+      }
+      return None
+    }
+    isCyclicSetRec( nums(0), nums.slice(1, nums.length) ) match {
+      case Some(num) => return if (wrap) isCyclic(num, nums(0), 2) else true
+      case None => return false
+    }
+  }
+
+
   @deprecated( "Use Numberwork.sumOfDigits instead.", "Dec. 11, 2012" )
   def digitalSum( n: BigInt ): Int = toIntList( n ).foldLeft(0)( _ + _ )
 

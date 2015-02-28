@@ -45,8 +45,11 @@ Problem 58:
     user    0m33.103s
     sys     0m0.298s
 
+Problem 59:
+    real    41.70s
+
 Problem 60:
     real    10.34s
 
-Problem 59:
-    real    41.70
+Problem 61:
+    17.47s user 0.29s system 105% cpu 16.806 total
