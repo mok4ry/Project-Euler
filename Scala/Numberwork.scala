@@ -94,7 +94,7 @@ object Numberwork {
   def toIntList( n: BigInt ): List[Int] =
     n.toString.toList.map( _.toInt - '0'.toInt )
 
-  def numOfDigits( n: BigInt ): BigInt = sumOfNthPowersOfDigits( n, 0 )
+  def numOfDigits( n: BigInt ): BigInt = toIntList(n).length
 
   def sumOfDigits( n: BigInt ): BigInt = sumOfNthPowersOfDigits( n, 1 )
 
